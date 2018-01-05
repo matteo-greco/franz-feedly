@@ -1,15 +1,11 @@
 module.exports = (Franz) => {
-  function getMessages() {
-    let direct = 0;
-    let indirect = 0;
-    const FranzData = document.querySelector('#FranzMessages').dataset;
-    if (FranzData) {
-      direct = FranzData.direct;
-      indirect = FranzData.indirect;
+    function getMessages() {
+        const unreadNode = document
+            .getElementById('latesttab_header')
+            .getElementsByClassName('streamUnreadCount')[0];
+        let unread = parseInt(unreadNode.innerHTML);
+        Franz.setBadge(unread);
     }
 
-    Franz.setBadge(direct, indirect);
-  }
-
-  Franz.loop(getMessages);
+    Franz.loop(getMessages);
 }
