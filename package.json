@@ -1,0 +1,13 @@
+{
+  "id": "feedly",
+  "name": "Feedly",
+  "version": "0.0.1",
+  "description": "Feedly",
+  "main": "index.js",
+  "author": "Matteo Greco <matteo@matteogreco.net>",
+  "license": "MIT",
+  "repository": "https://github.com/matteo-greco/franz-feedly",
+  "config": {
+    "serviceURL": "https://feedly.com/"
+  }
+}
